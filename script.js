@@ -56,9 +56,208 @@ function die3() {
   console.log('Die 3 result: ' + die3Result);
 }
 
+function showPlay() {
+  
+  $('.play-grid').hide();
+    
+  if (playResultRoll == 11) {
+    $('.one-one').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 12) {
+    $('.one-two').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 13) {
+    $('.one-three').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 14) {
+    $('.one-four').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 15) {
+    $('.one-five').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 16) {
+    $('.one-six').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 22) {
+    $('.two-two').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 23) {
+    $('.two-three').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 24) {
+    $('.two-four').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 25) {
+    $('.two-five').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 26) {
+    $('.two-six').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 33) {
+    $('.three-three').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 34) {
+    $('.three-four').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 35) {
+    $('.three-five').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 36) {
+    $('.three-six').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 44) {
+    $('.four-four').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 45) {
+    $('.four-five').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 46) {
+    $('.four-six').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 55) {
+    $('.five-five').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 56) {
+    $('.five-six').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
+  } else if (playResultRoll == 66) {
+    $('.six-six').css({
+      'display' : 'grid'
+    }).fadeIn();
+  }
+}
+
 function diceRoll() {
   // roll the dice when clicking on dice group
-  $('.dice').on('click', function() {
+  $('.dice-group').on('click', function() {
+    // roll all the dice
+    die1();
+    die2();
+    die3();
+
+    // hide all dice on click
+    $('.die1, .die2, .die3').hide();
+
+    // inserts roll results of the first two dice and
+    // insures first die is always smaller
+    if (die2Result < die1Result) {
+      $('.die1 span').text(die2Result);
+      $('.die2 span').text(die1Result);
+    } else {
+      $('.die1 span').text(die1Result);
+      $('.die2 span').text(die2Result);
+    }
+
+    // inserts roll result of the third die roll
+    $('.die3 span').text(die3Result);
+
+    // show all the dice with a fade animation
+    $('.die1, .die2, .die3').fadeIn();
+    
+    playResultRoll = $('.die1 span').text() + $('.die2 span').text();
+    // console.log(playResultRoll);
+    
+    showPlay();
+    
+    cardFlip();
+    
+  });
+}
+
+diceRoll();
+
+function refreshRoll() {
+  // roll the dice when clicking on refresh icon
+  $('.refresh').on('click', function() {
     // roll all the dice
     die1();
     die2();
@@ -85,7 +284,7 @@ function diceRoll() {
   });
 }
 
-diceRoll();
+refreshRoll();
 
 function cardFlip() {
   $('.card').on('click', function() {
@@ -118,7 +317,34 @@ function cardFlip() {
   });
 }
 
-cardFlip();
+function cardFlip() {
+  var currNumber = $('.card span').text();
+  // console.log('Current card #: ' + currNumber);
+  currNumber = parseInt(currNumber);
+
+  if (currNumber > 1) {
+    currNumber--;
+    $('.card span').text(currNumber);
+  } else if (currNumber == 1) {
+    $('.card span').text('End of Quarter');
+  } else if ($('.card span').text() == 'End of Quarter') {
+    var currQuarter = $('.quarter span').text();
+    // console.log('Current quarter #: ' + currQuarter);
+    // currQuarter = parseInt(currQuarter);
+
+    if (currQuarter < 4) {
+      currQuarter++;
+      $('.quarter span').text(currQuarter);
+      $('.card span').text('50');
+    } else if (currQuarter == 4 || currQuarter == 'OT') {
+      currQuarter = 'OT';
+      $('.quarter span').text(currQuarter);
+      $('.card span').text('22');
+    }
+  }
+}
+
+
 
 
 function addToScore() {

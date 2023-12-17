@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>CodePen - Dice Basketball Dice Roller</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css'><link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
@@ -36,10 +36,376 @@
   <section class="cards">
     <div class="card"><span>50</span></div>
   </section>
+  <section class="play">
+    <div class="play-grid one-one" hidden="hidden">
+      <p class="play-result">Off Foul</p>
+      <div class="play-text"> 
+        <p>Foul on the offensive team.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1 - C</li>
+          <li>2 - PF</li>
+          <li>3 - SF</li>
+          <li>4 - SG</li>
+          <li>5 - PG</li>
+          <li>6-10 - Low</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid one-two" hidden="hidden">
+      <p class="play-result">Steal</p>
+      <div class="play-text"> 
+        <p>Defense steals the pass.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1 - C</li>
+          <li>2 - PF</li>
+          <li>3 - SF</li>
+          <li>4-5 - SG</li>
+          <li>6-9 - PG</li>
+          <li>10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid one-three" hidden="hidden">
+      <p class="play-result">Def Foul</p>
+      <div class="play-text"> 
+        <p>Shooting foul on the defense.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1 - C</li>
+          <li>2 - PF</li>
+          <li>3 - SF</li>
+          <li>4 - SG</li>
+          <li>5 - PG</li>
+          <li>6-10 - Low</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid one-four" hidden="hidden">
+      <p class="play-result">Turnover</p>
+      <div class="play-text"> 
+        <p>Ball handler makes a bad pass.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1-2 - C</li>
+          <li>3-4 - PF</li>
+          <li>5-6 - SF</li>
+          <li>7-8 - SG</li>
+          <li>9-10 - PG</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid one-five" hidden="hidden">
+      <p class="play-result">2-Point Make</p>
+      <div class="play-text"> 
+        <p>Fastbreak layup down the lane.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1 - C</li>
+          <li>2 - PF</li>
+          <li>3-4 - SF</li>
+          <li>5-6 - SG</li>
+          <li>7-8 - PG</li>
+          <li>9-10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid one-six" hidden="hidden">
+      <p class="play-result">2-Point</p>
+      <div class="play-text"> 
+        <p>Jumper from the elbow.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1-2 - C</li>
+          <li>3-4 - PF</li>
+          <li>5-6 - SF</li>
+          <li>7-8 - SG</li>
+          <li>9 - PG</li>
+          <li>10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid two-two" hidden="hidden">
+      <p class="play-result">3-Point Make</p>
+      <div class="play-text"> 
+        <p>3-Point shot from the top of the key.</p>
+      </div>
+      <div class="play-players">
+        <ul class="short">
+          <li>1 - C[B]/Hi</li>
+          <li>2 - PF[C]/Hi</li>
+          <li>3-5 - SF</li>
+          <li>6-8 - SG</li>
+          <li>9-10 - PG</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid two-three" hidden="hidden">
+      <p class="play-result">2-Point</p>
+      <div class="play-text"> 
+        <p>Jump shot from the baseline.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1-2 - C</li>
+          <li>3 - PF</li>
+          <li>4-5 - SF</li>
+          <li>6-8 - SG</li>
+          <li>9 - PG</li>
+          <li>10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid two-four" hidden="hidden">
+      <p class="play-result">3-Point</p>
+      <div class="play-text"> 
+        <p>3-Pointer from the right corner.</p>
+      </div>
+      <div class="play-players">
+        <ul class="short">
+          <li>1 - PF[B]/Hi</li>
+          <li>2-5 - SF</li>
+          <li>6-9 - SG</li>
+          <li>10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid two-five" hidden="hidden">
+      <p class="play-result">2-Point</p>
+      <div class="play-text"> 
+        <p>Jumper from the free throw line.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1 - C</li>
+          <li>2-4 - PF</li>
+          <li>5-6 - SF</li>
+          <li>7-8 - SG</li>
+          <li>9 - PG</li>
+          <li>10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid two-six" hidden="hidden">
+      <p class="play-result">2-Point Make</p>
+      <div class="play-text"> 
+        <p>Dunk on the fastbreak.</p>
+      </div>
+      <div class="play-players">
+        <ul class="short">
+          <li>1-3 - C</li>
+          <li>4-7 - PF</li>
+          <li>8-9 - SF</li>
+          <li>10 - SG</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid three-three" hidden="hidden">
+      <p class="play-result">Def Foul</p>
+      <div class="play-text"> 
+        <p>Non-shooting foul on the defense.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1-2 - C</li>
+          <li>3 - PF</li>
+          <li>4-5 - SF</li>
+          <li>6 - SG</li>
+          <li>7-8 - PG</li>
+          <li>9-10 - Low</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid three-four" hidden="hidden">
+      <p class="play-result">2-Point</p>
+      <div class="play-text"> 
+        <p>Hook shot in the paint.</p>
+      </div>
+      <div class="play-players">
+        <ul class="short">
+          <li>1-4 - C</li>
+          <li>5-7 - PF</li>
+          <li>8 - SF</li>
+          <li>9 - SG</li>
+          <li>10 - PG</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid three-five" hidden="hidden">
+      <p class="play-result">3-Point</p>
+      <div class="play-text"> 
+        <p>3-Pointer from the left wing.</p>
+      </div>
+      <div class="play-players">
+        <ul class="short">
+          <li>1-3 - SF</li>
+          <li>4-7 - SG</li>
+          <li>8-9 - PG</li>
+          <li>10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid three-six" hidden="hidden">
+      <p class="play-result">2-Point</p>
+      <div class="play-text"> 
+        <p>Fadeaway mid-range jumper.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1 - C</li>
+          <li>2 - PF</li>
+          <li>3-4 - SF</li>
+          <li>5-6 - SG</li>
+          <li>7-8 - PG</li>
+          <li>9-10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid four-four" hidden="hidden">
+      <p class="play-result">And 1</p>
+      <div class="play-text"> 
+        <p>Shot goes in and the shooter is fouled.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1-2 - C</li>
+          <li>3-4 - PF</li>
+          <li>5-6 - SF</li>
+          <li>7-8 - SG</li>
+          <li>9 - PG</li>
+          <li>10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid four-five" hidden="hidden">
+      <p class="play-result">Def Foul</p>
+      <div class="play-text"> 
+        <p>Shooting foul on the defense.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1 - C</li>
+          <li>2-3 - PF</li>
+          <li>4 - SF</li>
+          <li>5 - SG</li>
+          <li>6 - PG</li>
+          <li>7-10 - Low</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid four-six" hidden="hidden">
+      <p class="play-result">Turnover</p>
+      <div class="play-text"> 
+        <p>Ball handler makes a bad pass.</p>
+      </div>
+      <div class="play-players">
+        <ul class="short">
+          <li>1-2 - C</li>
+          <li>3-4 - PF</li>
+          <li>5-6 - SF</li>
+          <li>7-8 - SG</li>
+          <li>9-10 - PG</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid five-five" hidden="hidden">
+      <p class="play-result">3-Point Make</p>
+      <div class="play-text"> 
+        <p>3-Point shot from the top of the key.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1 - C[A]/Hi</li>
+          <li>2 - PF[B]/Hi</li>
+          <li>3 - SF</li>
+          <li>4 - SG</li>
+          <li>5 - PG</li>
+          <li>6-10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid five-six" hidden="hidden">
+      <p class="play-result">2-Point</p>
+      <div class="play-text"> 
+        <p>Jump shot from the baseline.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1 - C</li>
+          <li>2 - PF</li>
+          <li>3 - SF</li>
+          <li>4 - SG</li>
+          <li>5 - PG</li>
+          <li>6-10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid six-six" hidden="hidden">
+      <p class="play-result">Block</p>
+      <div class="play-text"> 
+        <p>Defense blocks the shot.</p>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1-2 - C</li>
+          <li>3-4 - PF</li>
+          <li>5 - SF</li>
+          <li>6 - SG</li>
+          <li>7 - PG</li>
+          <li>8-10 - High</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid rebound" hidden="hidden">
+      <p class="play-result">Rebound</p>
+      <div class="play-players">
+        <ul>
+          <li>1-4 - C</li>
+          <li>5 - PF</li>
+          <li>6 - SF</li>
+          <li>7 - SG</li>
+          <li>8 - PG</li>
+          <li>9-10 - Off</li>
+        </ul>
+      </div>
+      <div class="play-players">
+        <ul>
+          <li>1-4 - C</li>
+          <li>5-6 - PF</li>
+          <li>7-8 - SF</li>
+          <li>9 - SG</li>
+          <li>10 - PG</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-grid assist" hidden="hidden">
+      <p class="play-result">Assist</p>
+      <div class="play-players">
+        <ul>
+          <li>1 - C</li>
+          <li>2 - PF</li>
+          <li>3 - SF</li>
+          <li>4 - SG</li>
+          <li>5-8 - PG</li>
+          <li>9-10 - None</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <footer class="dice">
-    <div class="die die1"><span></span></div>
-    <div class="die die2"><span></span></div>
-    <div class="die die3"><span></span></div>
+    <div class="dice-group">
+      <div class="die die1"><span></span></div>
+      <div class="die die2"><span></span></div>
+      <div class="die die3"><span></span></div>
+    </div>
+    <div class="refresh"><i class="zmdi zmdi-refresh"></i></div>
   </footer>
 </div>
 <!-- partial -->
