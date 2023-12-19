@@ -79,8 +79,17 @@ function showPlay() {
     $('.one-four').css({
       'display' : 'grid'
     }).fadeIn();
+    $('.rebound').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.assist').css({
+      'display' : 'grid'
+    }).fadeIn();
   } else if (playResultRoll == 15) {
     $('.one-five').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
       'display' : 'grid'
     }).fadeIn();
     $('.assist').css({
@@ -98,9 +107,6 @@ function showPlay() {
     }).fadeIn();
   } else if (playResultRoll == 22) {
     $('.two-two').css({
-      'display' : 'grid'
-    }).fadeIn();
-    $('.assist').css({
       'display' : 'grid'
     }).fadeIn();
   } else if (playResultRoll == 23) {
@@ -137,7 +143,7 @@ function showPlay() {
     $('.two-six').css({
       'display' : 'grid'
     }).fadeIn();
-    $('.assist').css({
+    $('.rebound').css({
       'display' : 'grid'
     }).fadeIn();
   } else if (playResultRoll == 33) {
@@ -178,7 +184,7 @@ function showPlay() {
     $('.four-four').css({
       'display' : 'grid'
     }).fadeIn();
-    $('.assist').css({
+    $('.rebound').css({
       'display' : 'grid'
     }).fadeIn();
   } else if (playResultRoll == 45) {
@@ -194,6 +200,9 @@ function showPlay() {
     }).fadeIn();
   } else if (playResultRoll == 55) {
     $('.five-five').css({
+      'display' : 'grid'
+    }).fadeIn();
+    $('.rebound').css({
       'display' : 'grid'
     }).fadeIn();
     $('.assist').css({
@@ -305,11 +314,11 @@ function cardFlip() {
       if (currQuarter < 4) {
         currQuarter++;
         $('.quarter span').text(currQuarter);
-        $('.card span').text('50');
+        $('.card span').text('60');
       } else if (currQuarter == 4 || currQuarter == 'OT') {
         currQuarter = 'OT';
         $('.quarter span').text(currQuarter);
-        $('.card span').text('22');
+        $('.card span').text('28');
       }
     }
     
@@ -335,11 +344,11 @@ function cardFlip() {
     if (currQuarter < 4) {
       currQuarter++;
       $('.quarter span').text(currQuarter);
-      $('.card span').text('50');
+      $('.card span').text('60');
     } else if (currQuarter == 4 || currQuarter == 'OT') {
       currQuarter = 'OT';
       $('.quarter span').text(currQuarter);
-      $('.card span').text('22');
+      $('.card span').text('28');
     }
   }
 }
